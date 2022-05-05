@@ -12,23 +12,25 @@
         let num = 11;
 
         // perform pre and post increment/decrement simultaneously
+        ++num; // pre inc
+        document.write(num);
+        document.write('<br/>');
 
-        ++num;
-        let a =num;
+        num++; // post inc
+        document.write(num);
+        document.write('<br/>');
 
-        num++;
-        let b =num;
+        --num; // pre inc 
+        document.write(num);
+        document.write('<br/>');
 
-        --num;
-        let c =num;
+        num--; //post dec
+        document.write(num);
+        document.write('<br/>');
 
-        num--;
-        let d=num;
 
 
         //write result on webpage
-        document.write(`the pre incr is ${a} <br/> the post incre is ${b} <br/> the pre decre is ${num} <br/> the post decre is ${num}`);
-
     </script>
 </body>
 </html>

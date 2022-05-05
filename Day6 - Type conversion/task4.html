@@ -9,34 +9,42 @@
 <body>
     <script>
         // declare a boolean variable
-        let ispass = true;
+
+        let booleanvar = true;  //true=1, false=0;
 
         // declare a number varibale
-        let num =22;
+        let a = 2;
 
 
         // declare a string variable
-        var name = 'rik';
 
+        let color = "Red";
 
         //perform all arithmetic ops between boolean and number variable
-        let sum1 = ispass+num;
-        let diff1 = ispass-num;
-        let product1= ispass*num;
-        let divide1 = ispass/num;
-        let remainder1 = ispass%num;
+        document.write("<br> a+true=", a+true);
+     
+        document.write("<br> a-true=", a-true);
+       
+        document.write("<br> a*true=", a*true);
+        
+        document.write("<br> a/true=", a/true);
+        
+
+
+
 
         //perform all arithmetic ops between boolean and string variable
-        let sum2 = ispass+name;
-        let diff2 = ispass-name;
-        let product2= ispass*name;
-        let divide2 = ispass/name;
-        let remainder2 = ispass%name;
+
+        document.write("<br>true+color= ",true+color);
+
+        document.write("<br>true-color= ",true-color);
+
+        document.write("<br>true*color= ",true*color);
+
+        document.write("<br>true/color= ",true/color);
+
 
         // write all results in webpage
-
-      document.write(`FOr boolean and number <br/> ${sum1} <br/> ${diff1} <br/> ${product1} <br/> ${divide1} <br/> ${remainder1} <br/>`);
-       document.write(`FOr boolean and name <br/> ${sum2} <br/> ${diff2} <br/> ${product2} <br/> ${divide2} <br/> ${remainder2} <br/>`);
     </script>
 </body>
 </html>

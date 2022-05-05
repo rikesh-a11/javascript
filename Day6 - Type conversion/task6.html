@@ -11,15 +11,19 @@
         let a = '45';
         let b= null;
         //convert variable a & b into number explicitly and subtract from 200;
-        var c = +a;
-        var d = +b;
-        console.log(`a is ${c} <br/> b is ${d}`);
+        let num_a = Number ('45');
+        let num_b = Number ('null');
 
-        let sub1 = 200-c;
-        let sub2 = 200-d;
+        document.write("<br> variable a into number is ",num_a);
 
-        console.log(`first one ${sub1} <br/> second one ${sub2}`);
-  
+        document.write("<br> variable b into number is ",num_b);
+
+
+        let sub = 200-a;
+        document.write("200-a is", sub);
+
+
+
     </script>
 </body>
 </html>

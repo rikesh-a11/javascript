@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Clock</title>
+    <style>
+        body {
+            font-size: 64px;
+            padding: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clock"></div>
+    <script>
+        function timechange() {
+            const now = new Date();
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const months = ["January", "February","March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
+            const dayOfWeek = days[now.getDay()];
+            const month = months[now.getMonth()];
+            const dayOfMonth = now.getDate();
+            const year = now.getFullYear();
+            let hour = now.getHours();
+            let ampm = "AM";
+            if (hour >= 12) {
+                hour -= 12;
+                ampm = "PM";
+            }
+            if (hour === 0) {
+                hour = 12;
+            }
+            const minute = now.getMinutes();
+            const second = now.getSeconds();
+            const time = month + " " + dayOfMonth + " " + year + " " +
+                dayOfWeek + " " + hour + ":" + (minute < 10 ? "0" + minute : minute) + ":"
+                + (second < 10 ? "0" + second : second) + " " + ampm;
+            document.getElementById("clock").innerHTML = time;
+        }
+        setInterval(timechange, 1000); // change the clock every second
+    </script>
+</body>
+</html>

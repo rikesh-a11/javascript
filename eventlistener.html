@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS EVENT</title>
+    <style>
+        .info-box{
+            margin-left: 400px;
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <div class="info-box">
+        <img src="./image/wordpress.png" width="200" height="200" alt=""/>
+        <p>This is the wordpress image</p>
+    </div>
+    <script>
+        let infoImg = document.querySelector(".info-box img");
+        // document.getElementByIdClassname("info-box");
+
+        infoImg.addEventListener("mouseover", () => {
+            infoImg.nextElementSibling.innerHTML = "hello";
+        })
+
+        infoImg.addEventListener("mouseout", () => {
+            infoImg.nextElementSibling.innerHTML = "bye";
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <h1>Form validation</h1>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="firstName" /><br />
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" /><br />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" /><br />
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" /><br />
+        <input type="submit" value="Submit" />
+    </form>
+    <script>
+        function validateForm() {
+            var name = document.forms["registrationForm"]["name"].value;
+            var email = document.forms["registrationForm"]["email"].value;
+            var password = document.forms["registrationForm"]["password"].value;
+            var confirmPassword =
+                document.forms["registrationForm"]["confirmPassword"].value;
+            // Check if first name is valid
+            if (name.length < 2 || name.length > 30) {
+                alert("First name must be between 2 and 30 characters.");
+                return false;
+            }
+            // Check if email is valid
+            var emailRegex = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+            // Check if password is length is 6 or more
+            if (password.length < 6) {
+                alert(
+                    "Password must contain at least 6 characters"
+                );
+                return false;
+            } // Check if confirm password matches password
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            // If all validation checks pass, return true
+            return true;
+        }
+    </script>
+</body>
+</html>

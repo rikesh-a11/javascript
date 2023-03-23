@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery events and effects</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Hide the box when the "Hide" button is clicked
+            $("#hide").click(function () {
+                $("p").hide("slow");
+            });
+
+            // Show the box when the "Show" button is clicked
+            $("#show").click(function () {
+                $("p").show("fast");
+            });
+        });
+    </script>
+    <style>
+        .event{
+           margin-left: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="event">
+        <p>If you click on hide button, I will disappear</p>
+        <button id="hide">Hide</button>
+        <button id="show">Show</button>
+    </div>
+
+</body>
+</html>
